@@ -1,4 +1,5 @@
 # cs302-final-project
+Tech Stack: React, MUI, Next.js (Express), Typescript, MongoDB Atlas
 
 Note: To run the backend locally the user will need a ./backend/.env file containing a mongodbURI
 Example of the file:
