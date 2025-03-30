@@ -1,50 +1,81 @@
-"use client";
-import { useState } from 'react';
-import { Container, TextField, Button, Typography, Box } from '@mui/material';
+'use client';
+import { Box, Typography, Grid } from '@mui/material';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+import FeatureCard from '../components/FeatureCard';
 
-export default function Home() {
-  const [input, setInput] = useState('');
-  const [results, setResults] = useState([]);
-
-  const handleSubmit = async () => {
-    const res = await fetch('http://localhost:5000/api/match', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ input }),
-    });
-
-    const data = await res.json();
-    setResults(data.matches);
-  };
-
+export default function HomePage() {
   return (
-    <Container maxWidth="md" sx={{ py: 4 }}>
-      <Typography variant="h4" gutterBottom>
-        Case-Based Reference System
-      </Typography>
-      <TextField
-        label="Describe your case"
-        multiline
-        fullWidth
-        rows={4}
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <Box mt={2}>
-        <Button variant="contained" onClick={handleSubmit}>
-          Find Similar Cases
-        </Button>
+    <Box px={2} py={4}>
+      <Header />
+
+      <Box textAlign="center" mt={10}>
+        <Typography
+          sx={{
+            fontFamily: 'Georgia, serif',
+            fontWeight: 700,
+            fontSize: '2.75rem',
+            lineHeight: 1.2,
+          }}
+        >
+          Find similar cases<br />and relevant policies
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 400,
+            fontSize: '1rem',
+            mt: 2,
+            maxWidth: '600px',
+            mx: 'auto',
+          }}
+        >
+          Input a case or situation and receive references to similar cases and relevant policies.
+        </Typography>
+        <SearchBar />
       </Box>
 
-      {/* Placeholder for results */}
-      <Box mt={4}>
-        {results.map((r: any, idx: number) => (
-          <Box key={idx} sx={{ mb: 2 }}>
-            <Typography variant="h6">{r.title}</Typography>
-            <Typography variant="body2">{r.summary}</Typography>
-          </Box>
-        ))}
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        mt={6}
+        mx="auto"
+        width="100%"
+        maxWidth="720px"
+        gap={3}
+      >
+        <FeatureCard
+          title="Similar Cases"
+          description="Quickly retrieve comparable precedents"
+        />
+        <FeatureCard
+          title="Relevant Policies"
+          description="Access pertinent policy documents"
+        />
       </Box>
-    </Container>
+
+      <Box textAlign="center" mt={10} p={4} bgcolor="#efe1c9">
+        <Typography
+          sx={{
+            fontFamily: 'Georgia, serif',
+            fontWeight: 700,
+            fontSize: '1.5rem',
+          }}
+        >
+          For professionals and students
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 400,
+            fontSize: '1rem',
+            mt: 1,
+          }}
+        >
+          Quickly retrieve comparable precedents<br />
+          and policy documents
+        </Typography>
+      </Box>
+    </Box>
   );
 }
