@@ -1,0 +1,40 @@
+Braden Wingfield
+Github: https://github.com/bradenwingfield/cs302-final-project
+Challenge 7
+
+Tasks Completed for C7:
+- Github Repo Created
+- React, Nodejs, Typescript Project Initialized
+- MongoDB Created
+- Frontend UI Rough Draft Created
+- Frontend UI Rough Draft Coded
+
+Report: Challenge 7 has gone well. The frontend is created.
+The writing will need to be updated with correct terminology once that is determined. 
+The UI is not functional and will need to be connected to the backend next. 
+
+Case Finder Project Rubric
+Total: 100 Points
+
+1. User Interface & Experience - 25 Points
+- Intuitive and user-friendly design .................. 10 pts
+- Clear display of results (e.g. formatting, layout) .. 10 pts
+- Visual polish (spacing, colors, labels) ............. 5 pts
+
+2. Documentation - 20 Points
+- README includes setup and usage instructions ........ 10 pts
+- Explanation of design decisions and limitations ..... 10 pts
+
+3. Functionality - 20 Points
+- Users can input a case/situation .................... 5 pts
+- Relevant references/policies are returned ........... 10 pts
+- Basic features work without major bugs .............. 5 pts
+
+4. Code Quality & Structure - 15 Points
+- Code is organized and modular ....................... 5 pts
+- Clear naming and readability ........................ 5 pts
+- Use of components/functions appropriately ........... 5 pts
+
+5. Data Handling - 10 Points
+- Basic logic for matching or retrieving relevant info  5 pts
+- Efficient handling of input and results ............. 5 pts
