@@ -3,7 +3,7 @@ import { Box, Typography, Button } from '@mui/material';
 
 export default function Header() {
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="space-between" p={3}>
       <Typography
         sx={{
           fontFamily: 'Inter, sans-serif',
@@ -16,10 +16,10 @@ export default function Header() {
         CASE FINDER
       </Typography>
       <Box>
-        <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, textTransform: 'none' }}>
+        <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: '0.95rem', textTransform: 'none' }}>
           How It Works
         </Button>
-        <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, textTransform: 'none' }}>
+        <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: '0.95rem', textTransform: 'none' }}>
           Sign In
         </Button>
       </Box>

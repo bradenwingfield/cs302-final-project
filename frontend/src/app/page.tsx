@@ -14,7 +14,8 @@ export default function HomePage() {
           sx={{
             fontFamily: 'Georgia, serif',
             fontWeight: 700,
-            fontSize: '2.5rem',
+            fontSize: '2.75rem',
+            lineHeight: 1.2,
           }}
         >
           Find similar cases<br />and relevant policies
@@ -23,7 +24,10 @@ export default function HomePage() {
           sx={{
             fontFamily: 'Inter, sans-serif',
             fontWeight: 400,
+            fontSize: '1rem',
             mt: 2,
+            maxWidth: '600px',
+            mx: 'auto',
           }}
         >
           Input a case or situation and receive references to similar cases and relevant policies.
@@ -31,20 +35,24 @@ export default function HomePage() {
         <SearchBar />
       </Box>
 
-      <Grid container spacing={4} justifyContent="center" mt={6}>
-        <Grid item>
-          <FeatureCard
-            title="Similar Cases"
-            description="Quickly retrieve comparable precedents"
-          />
-        </Grid>
-        <Grid item>
-          <FeatureCard
-            title="Relevant Policies"
-            description="Access pertinent policy documents"
-          />
-        </Grid>
-      </Grid>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        mt={6}
+        mx="auto"
+        width="100%"
+        maxWidth="720px"
+        gap={3}
+      >
+        <FeatureCard
+          title="Similar Cases"
+          description="Quickly retrieve comparable precedents"
+        />
+        <FeatureCard
+          title="Relevant Policies"
+          description="Access pertinent policy documents"
+        />
+      </Box>
 
       <Box textAlign="center" mt={10} p={4} bgcolor="#efe1c9">
         <Typography
@@ -60,6 +68,7 @@ export default function HomePage() {
           sx={{
             fontFamily: 'Inter, sans-serif',
             fontWeight: 400,
+            fontSize: '1rem',
             mt: 1,
           }}
         >

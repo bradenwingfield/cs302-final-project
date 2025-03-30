@@ -8,14 +8,35 @@ interface FeatureCardProps {
 
 export default function FeatureCard({ title, description }: FeatureCardProps) {
   return (
-    <Paper elevation={2} sx={{ p: 3, width: 300, backgroundColor: '#f4e3c4' }}>
+    <Paper
+      elevation={1}
+      sx={{
+        width: 345,
+        height: 140,
+        p: 3,
+        borderRadius: '12px',
+        backgroundColor: '#efe1c9',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+      }}
+    >
       <Typography
-        sx={{ fontFamily: 'Georgia, serif', fontWeight: 700, fontSize: '1.2rem' }}
+        sx={{
+          fontFamily: 'Georgia, serif',
+          fontWeight: 700,
+          fontSize: '1.25rem',
+        }}
       >
         {title}
       </Typography>
       <Typography
-        sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, mt: 1 }}
+        sx={{
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 400,
+          fontSize: '0.95rem',
+          mt: 1,
+        }}
       >
         {description}
       </Typography>
