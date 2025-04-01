@@ -21,9 +21,9 @@ Total: 100 Points
 - Clear display of results (e.g. formatting, layout) .. 10 pts
 - Visual polish (spacing, colors, labels) ............. 5 pts
 
-2. Documentation - 20 Points
-- README includes setup and usage instructions ........ 10 pts
-- Explanation of design decisions and limitations ..... 10 pts
+2. Documentation - 25 Points
+- README includes setup and usage instructions ........ 12.5 pts
+- Explanation of design decisions and limitations ..... 12.5 pts
 
 3. Functionality - 20 Points
 - Users can input a case/situation .................... 5 pts
@@ -35,6 +35,6 @@ Total: 100 Points
 - Clear naming and readability ........................ 5 pts
 - Use of components/functions appropriately ........... 5 pts
 
-5. Data Handling - 10 Points
-- Basic logic for matching or retrieving relevant info  5 pts
-- Efficient handling of input and results ............. 5 pts
+5. Data Handling - 15 Points
+- Basic logic for matching or retrieving relevant info  7.5 pts
+- Efficient handling of input and results ............. 7.5 pts
