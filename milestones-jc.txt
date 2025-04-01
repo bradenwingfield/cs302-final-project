@@ -1,0 +1,47 @@
+John Cheek
+Github: https://github.com/bradenwingfield/cs302-final-project
+Challenge 7
+
+Time Log: 
+Learning Axios and Cheerio - 1 hr
+Reviewing Typescript Syntax - 30 min
+Building/testing web scraper (scrape.ts) - 2 hr
+Determining how to get data in MongoDB
+(manual vs. web scraper vs. api - best website) - 1 hr
+Manually inputting data - 1 hr
+
+Report
+The thing I have found so far that is most difficult is getting the
+data that we need into the database. There is no public facing API
+that allows us to get Tennessee State Code. So that leaves us with
+either the option of web scraping or manually inputting the data. 
+Web scraping would require recursive calls which overloads the requests,
+likely meaning that we will have to resort to manual. The other option
+is looking at past cases in Tennessee and pulling the most relevant.
+That data would be public and API accessible. 
+
+Case Finder Project 
+100 Points
+
+User Interface - 25 pts
+ - User friendly
+ - Clearly view search results
+ - Site is responsive
+
+Functionality and Features - 25 pts
+ - Users can input a case
+ - Relevant cases are returned
+ - Works without major bugs
+
+Code Quality - 20 pts
+ - Organized code with comments
+ - Clear naming and readable
+ - Components/functions used properly
+
+Database Management - 15 pts
+ - Case/statute data is stored efficiently using a schema
+ - Data retrieval and search is effective
+
+Search Algorithm - 15 pts
+ - Effectiveness of the Algorithm
+ - Justification of use
