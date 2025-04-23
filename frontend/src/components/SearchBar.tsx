@@ -6,7 +6,7 @@ export default function SearchBar() {
     <Box display="flex" mt={5} maxWidth="720px" mx="auto">
       <TextField
         fullWidth
-        placeholder="Describe a case or situation"
+        placeholder="Search Knoxville laws or describe a local situation"
         variant="outlined"
         sx={{
           backgroundColor: 'white',

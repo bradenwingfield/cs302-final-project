@@ -18,7 +18,8 @@ export default function HomePage() {
             lineHeight: 1.2,
           }}
         >
-          Find similar cases<br />and relevant policies
+        Search Knoxville Municipal Codes
+
         </Typography>
         <Typography
           sx={{
@@ -30,7 +31,7 @@ export default function HomePage() {
             mx: 'auto',
           }}
         >
-          Input a case or situation and receive references to similar cases and relevant policies.
+          Type in a topic or question to explore official Knoxville ordinances and local regulations.
         </Typography>
         <SearchBar />
       </Box>
@@ -45,12 +46,12 @@ export default function HomePage() {
         gap={3}
       >
         <FeatureCard
-          title="Similar Cases"
-          description="Quickly retrieve comparable precedents"
+          title="Knoxville Ordinances"
+          description="Explore the official municipal code for Knoxville by topic or keyword."
         />
         <FeatureCard
-          title="Relevant Policies"
-          description="Access pertinent policy documents"
+          title="City Policies"
+          description="Access key rules and regulations that shape daily life in Knoxville."
         />
       </Box>
 
@@ -62,7 +63,7 @@ export default function HomePage() {
             fontSize: '1.5rem',
           }}
         >
-          For professionals and students
+          Know your city, understand your laws.
         </Typography>
         <Typography
           sx={{
@@ -72,8 +73,8 @@ export default function HomePage() {
             mt: 1,
           }}
         >
-          Quickly retrieve comparable precedents<br />
-          and policy documents
+          Whether you're a student, a resident, or a local business owner, <br/>
+          quickly find the municipal codes that matter to you.
         </Typography>
       </Box>
     </Box>

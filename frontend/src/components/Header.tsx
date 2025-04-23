@@ -13,14 +13,14 @@ export default function Header() {
           fontSize: '1rem',
         }}
       >
-        CASE FINDER
+        Knox Lookup
       </Typography>
       <Box>
         <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: '0.95rem', textTransform: 'none' }}>
           How It Works
         </Button>
         <Button sx={{ fontFamily: 'Inter, sans-serif', fontWeight: 400, fontSize: '0.95rem', textTransform: 'none' }}>
-          Sign In
+          Resources
         </Button>
       </Box>
     </Box>
