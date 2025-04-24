@@ -1,39 +1,66 @@
 'use client';
 import { Box, TextField, Button } from '@mui/material';
+import { useState } from 'react';
 
-export default function SearchBar() {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+export default function SearchBar({ onSearch }: SearchBarProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      onSearch(searchQuery);
+    }
+  };
+
   return (
-    <Box display="flex" mt={5} maxWidth="720px" mx="auto">
+    <Box
+      sx={{
+        display: 'flex',
+        gap: 2,
+        mt: 4,
+        maxWidth: '600px',
+        mx: 'auto',
+      }}
+    >
       <TextField
         fullWidth
-        placeholder="Search Knoxville laws or describe a local situation"
         variant="outlined"
+        placeholder="Describe your situation or question..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            handleSearch();
+          }
+        }}
         sx={{
-          backgroundColor: 'white',
-          borderRadius: '8px',
-          fontSize: '1rem',
-          '& input': {
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: 400,
-            fontSize: '1rem',
-            padding: '14px',
+          '& .MuiOutlinedInput-root': {
+            borderRadius: '8px',
+            bgcolor: 'white',
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#2c3e50',
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#2c3e50',
+            },
           },
         }}
       />
       <Button
         variant="contained"
+        onClick={handleSearch}
         sx={{
-          ml: 2,
-          backgroundColor: '#304F48',
+          bgcolor: '#2c3e50',
+          '&:hover': {
+            bgcolor: '#34495e',
+          },
           fontFamily: 'Inter, sans-serif',
           fontWeight: 600,
-          fontSize: '0.95rem',
           px: 4,
-          borderRadius: '8px',
-          textTransform: 'uppercase',
-          '&:hover': {
-            backgroundColor: '#203830',
-          },
+          py: 1.5,
         }}
       >
         Search
