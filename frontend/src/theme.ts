@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
+// Themes for design
 const theme = createTheme({
   typography: {
     fontFamily: 'Inter, sans-serif',

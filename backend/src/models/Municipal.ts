@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+// Typescript nterface to be used for our frontend
 interface IMunicipal {
   section: string;
   chapter: string;
@@ -9,6 +10,7 @@ interface IMunicipal {
   tags: string[];
 }
 
+// Schema that is imported into mongoDB
 const municipalSchema = new mongoose.Schema<IMunicipal>({
   section: { type: String, required: true },
   chapter: { type: String, required: true },
@@ -20,4 +22,5 @@ const municipalSchema = new mongoose.Schema<IMunicipal>({
   collection: 'municipal'
 });
 
+// Creation of schema in the database
 export const Municipal = mongoose.model<IMunicipal>('Municipal', municipalSchema); 

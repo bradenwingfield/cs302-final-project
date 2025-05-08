@@ -1,3 +1,4 @@
+// Typescript Interface used on frontend
 export interface Municipal {
   _id: string;
   section: string;

@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import { Municipal } from '../models/Municipal';
 
+// Establishes that this is a router
 const router = express.Router();
 
 // Get all municipal records

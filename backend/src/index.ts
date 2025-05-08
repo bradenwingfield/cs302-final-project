@@ -3,10 +3,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import municipalRouter from './routes/municipal';
-// import matchRouter from './routes/match';
 
+// Reads in the .env file
 dotenv.config();
 
+// Initiates use of express and establishes port
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -14,16 +15,17 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: 'http://localhost:3000', // Frontend URL
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // http requests
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }));
 
+// Use json to parse requests
 app.use(express.json());
 
+// Establishes router to the /api/municipal route
 app.use('/api/municipal', municipalRouter);
 
-// app.use('/api/match', matchRouter);
-
+// Connect to database
 mongoose.connect(process.env.MONGO_URI!)
   .then(() => {
     console.log('MongoDB connected');

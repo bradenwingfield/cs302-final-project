@@ -1,11 +1,13 @@
 'use client';
 import { Paper, Typography } from '@mui/material';
 
+// Props
 interface FeatureCardProps {
   title: string;
   description: string;
 }
 
+// Component
 export default function FeatureCard({ title, description }: FeatureCardProps) {
   return (
     <Paper

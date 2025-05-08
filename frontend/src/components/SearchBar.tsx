@@ -2,10 +2,12 @@
 import { Box, TextField, Button } from '@mui/material';
 import { useState } from 'react';
 
+//Props
 interface SearchBarProps {
   onSearch: (query: string) => void;
 }
 
+// Search bar component
 export default function SearchBar({ onSearch }: SearchBarProps) {
   const [searchQuery, setSearchQuery] = useState('');
 

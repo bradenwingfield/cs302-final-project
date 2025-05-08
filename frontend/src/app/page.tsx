@@ -1,4 +1,6 @@
 'use client';
+
+// Imported components and hooks
 import { Box, Typography, Grid, CircularProgress, Button } from '@mui/material';
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
@@ -10,6 +12,7 @@ import { Municipal } from '../types/municipal';
 import { MunicipalGraph } from '../utils/MunicipalGraph';
 
 export default function HomePage() {
+  // declaring state for components
   const [municipals, setMunicipals] = useState<Municipal[]>([]);
   const [displayedMunicipals, setDisplayedMunicipals] = useState<Municipal[]>([]);
   const [loading, setLoading] = useState(false);
@@ -20,6 +23,7 @@ export default function HomePage() {
   const [municipalGraph, setMunicipalGraph] = useState<MunicipalGraph | null>(null);
   const itemsPerPage = 4;
 
+  // Rendering component client side
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -52,6 +56,7 @@ export default function HomePage() {
     initializeGraph();
   }, []);
 
+  // Update municipals on current page
   useEffect(() => {
     if (municipals.length > 0) {
       const start = 0;
@@ -60,6 +65,7 @@ export default function HomePage() {
     }
   }, [municipals, page]);
 
+  // Handle search and update with resulting codes
   const handleSearch = async (searchQuery: string) => {
     setLoading(true);
     setError(null);
@@ -83,18 +89,22 @@ export default function HomePage() {
     }
   };
 
+  // Increment page number for more results
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
   };
 
+  // Prevent server-side rendering
   if (!mounted) {
     return null;
   }
 
+  // Displaying frontend
   return (
     <Box px={2} py={4}>
       <Header />
 
+      {/*Root section and Search Bar*/}
       <Box textAlign="center" mt={10}>
         <Typography
           sx={{
@@ -121,18 +131,21 @@ export default function HomePage() {
         <SearchBar onSearch={handleSearch} />
       </Box>
 
+      {/*Spinner for wait*/}
       {loading && (
         <Box display="flex" justifyContent="center" mt={4}>
           <CircularProgress />
         </Box>
       )}
 
+      {/*Error*/}
       {error && (
         <Box textAlign="center" mt={4}>
           <Typography color="error">{error}</Typography>
         </Box>
       )}
 
+      {/*Search results*/}
       {hasSearched && !loading && (
         <Box mt={6} maxWidth="1400px" mx="auto">
           <Typography
@@ -147,6 +160,8 @@ export default function HomePage() {
           >
             Search Results
           </Typography>
+
+          {/*Municipal cards*/}
           <Grid 
             container 
             spacing={3}
@@ -165,6 +180,8 @@ export default function HomePage() {
               </Grid>
             ))}
           </Grid>
+
+          {/*Load more*/}
           {displayedMunicipals.length < municipals.length && (
             <Box display="flex" justifyContent="center" mt={4}>
               <Button
@@ -188,6 +205,7 @@ export default function HomePage() {
         </Box>
       )}
 
+      {/*Default cards before search*/}
       {!hasSearched && (
         <>
           <Box
@@ -209,6 +227,7 @@ export default function HomePage() {
             />
           </Box>
 
+          {/*Bottom section*/}
           <Box textAlign="center" mt={10} p={4} bgcolor="#efe1c9">
             <Typography
               sx={{

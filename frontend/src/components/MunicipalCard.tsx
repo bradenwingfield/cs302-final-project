@@ -1,10 +1,12 @@
 import { Card, CardContent, Typography, Chip, Box } from '@mui/material';
 import { Municipal } from '../types/municipal';
 
+//Props
 interface MunicipalCardProps {
   municipal: Municipal;
 }
 
+// Card component used to display municipal codes
 export const MunicipalCard = ({ municipal }: MunicipalCardProps) => {
   return (
     <Card 

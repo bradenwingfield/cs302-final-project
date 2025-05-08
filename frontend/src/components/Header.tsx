@@ -1,6 +1,7 @@
 'use client';
 import { Box, Typography, Button } from '@mui/material';
 
+// Header component
 export default function Header() {
   return (
     <Box display="flex" justifyContent="space-between" p={3}>

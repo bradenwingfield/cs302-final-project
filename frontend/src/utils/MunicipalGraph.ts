@@ -1,5 +1,6 @@
 import { Municipal } from '../types/municipal';
 
+// Node class
 class GraphNode {
     municipal: Municipal;
     adjacentNodes: Map<string, number>; // Map of municipal ID to edge weight (similarity score)
@@ -42,6 +43,7 @@ class GraphNode {
     }
 }
 
+// Graph class
 export class MunicipalGraph {
     private nodes: Map<string, GraphNode>;
     
